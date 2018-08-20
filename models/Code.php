@@ -25,17 +25,24 @@ class Code
 	{
 		$db = Db::getConnection();
 						
-		  $result=array();
-		  if($min>$max) return $result;
-		  $count=min(max($count,0),$max-$min+1);
-		  while(count($result)<$count) {
+		$result=array();
+		if($min>$max) return $result;
+		$count=min(max($count,0),$max-$min+1);
+		while(count($result)<$count) {
 			$value=rand($min,$max-count($result));
 			foreach($result as $used) if($used<=$value) $value++; else break;
-			$result[]=$value;
-			sort($result);
-		  }
-		  shuffle($result);
-		  return $result;
+			$date = date("Y-m-d H:i:s");
+			$result[$value]=$date;
+			
+			//sort($result);
+		}
+		//shuffle($result);
+		foreach($result as $code=>$date){
+		$resultDB = $db->query("INSERT INTO `code` (`code`, `date`) VALUES ('$code', '$date');");		
+		}
+		
+		return $result;
+
 	}
 	
 	public static function removeCodes()
