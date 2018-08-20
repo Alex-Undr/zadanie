@@ -46,7 +46,12 @@ class Code
 	
 	public static function removeCodes()
 	{
-		
+		echo '
+		 <form action="delete" method="post">		  
+		  <textarea rows="10" cols="45" name="code"></textarea>
+		  <input type="submit"></p>
+		 </form>';
+	
 	}
 
 }

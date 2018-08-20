@@ -30,7 +30,11 @@ class CodeController
 	
 	public function actionDelete()
 	{
+		$del = Code::removeCodes();
 		
+		echo $del;
+		
+		var_dump($_POST);
 		return true;
 	}
 	
