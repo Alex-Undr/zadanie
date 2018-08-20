@@ -21,15 +21,14 @@ class Code
 		return $all;
 	}
 
-	public static function createCodes($min, $max, $count)
+	public static function createCodes($count)
 	{
 		$db = Db::getConnection();
 						
 		$result=array();
-		if($min>$max) return $result;
-		$count=min(max($count,0),$max-$min+1);
+
 		while(count($result)<$count) {
-			$value=rand($min,$max-count($result));
+			$value=rand();
 			foreach($result as $used) if($used<=$value) $value++; else break;
 			$date = date("Y-m-d H:i:s");
 			$result[$value]=$date;

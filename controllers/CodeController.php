@@ -20,7 +20,7 @@ class CodeController
 	public function actionGenerate()
 	{
 		$code = array();
-		$code = Code::createCodes(1000000000, 2000000000, 10);
+		$code = Code::createCodes(10);
 		
 		echo '<pre>';
 		print_r($code);
