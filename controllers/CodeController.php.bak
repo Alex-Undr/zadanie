@@ -1,6 +1,12 @@
 <?php
 
-
+<<<<<<< HEAD
+class SiteController
+{
+	public function actionAll()
+	{
+		
+=======
 include_once ROOT.'/models/Code.php';
 
 class CodeController
@@ -16,13 +22,20 @@ class CodeController
 		echo '</pre>';
 		
 		return true;
-
+>>>>>>> ae7a2ad6facd77ecc44c7f11f45fade2964a3aaf
 	}
-
+	
+	public function actionGenerate()
+	{
+<<<<<<< HEAD
+		
+	}
 	
 	public function actionCreate()
 	{
-
+		
+	}
+=======
 		$code = array();
 		$code = Code::createCodes(10);
 		
@@ -42,5 +55,5 @@ class CodeController
 		return true;
 	}
 	
-
+>>>>>>> ae7a2ad6facd77ecc44c7f11f45fade2964a3aaf
 }

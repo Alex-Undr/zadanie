@@ -19,3 +19,11 @@ $number = generateRandomNum(1000000000, 9999999999, 10);
 echo "<pre>";
 	var_dump($number);
 echo "</pre>";
+
+
+// INSERT INTO `code` (`code`, `date`) VALUES ('0123456789', '2018-08-19'), ('123321123', '2018-08-20');
+
+// SELECT * FROM `code`
+
+// DELETE FROM `code` WHERE `code`.`id` = 2;
+

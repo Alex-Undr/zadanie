@@ -21,26 +21,37 @@ class Code
 		return $all;
 	}
 
-	public static function createCodes($min, $max, $count)
+	public static function createCodes($count)
 	{
 		$db = Db::getConnection();
 						
-		  $result=array();
-		  if($min>$max) return $result;
-		  $count=min(max($count,0),$max-$min+1);
-		  while(count($result)<$count) {
-			$value=rand($min,$max-count($result));
+		$result=array();
+
+		while(count($result)<$count) {
+			$value=rand();
 			foreach($result as $used) if($used<=$value) $value++; else break;
-			$result[]=$value;
-			sort($result);
-		  }
-		  shuffle($result);
-		  return $result;
+			$date = date("Y-m-d H:i:s");
+			$result[$value]=$date;
+			
+			//sort($result);
+		}
+		//shuffle($result);
+		foreach($result as $code=>$date){
+		$resultDB = $db->query("INSERT INTO `code` (`code`, `date`) VALUES ('$code', '$date');");		
+		}
+		
+		return $result;
+
 	}
 	
 	public static function removeCodes()
 	{
-		
+		echo '
+		 <form action="delete" method="post">		  
+		  <textarea rows="10" cols="45" name="code"></textarea>
+		  <input type="submit"></p>
+		 </form>';
+	
 	}
 
 }
