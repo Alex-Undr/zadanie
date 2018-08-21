@@ -25,7 +25,7 @@
 		.table_blur {
 		  background: #f5ffff;
 		  border-collapse: collapse;
-		  text-align: center;
+		  text-align: left;
 		  width: 100%;
 		}
 		.table_blur th {

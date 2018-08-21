@@ -11,16 +11,19 @@ class CodeController
 		$all = array();
 		$all = Code::showCodes();
 		
-		echo '<pre>';
-		print_r($all);
-		echo '</pre>';
+		require_once(ROOT.'/views/all.php');
+		// echo '<pre>';
+		// print_r($all);
+		// echo '</pre>';
 		
-		return true;
+		
+		
+
 
 	}
 
 	
-	public function actionCreate()
+	public function actionGenerate()
 	{
 
 		$code = array();
