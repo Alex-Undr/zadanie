@@ -18,8 +18,7 @@
 		}
 		.content{
 		    background-color: #dde7e9;
-			border-radius: 17px;
-			padding: 22px 33px 24px;
+			border-radius: 17px;			
 			position: relative;
 		}
 		
