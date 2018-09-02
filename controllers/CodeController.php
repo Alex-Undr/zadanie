@@ -29,20 +29,22 @@ class CodeController
 		$code = array();
 		$code = Code::createCodes(10);
 		
-		echo '<pre>';
-		print_r($code);
-		echo '</pre>';		
+		require_once(ROOT.'/views/generate.php');
+		// echo '<pre>';
+		// print_r($code);
+		// echo '</pre>';		
 
 	}
 	
 	public function actionDelete()
 	{
-		$del = Code::removeCodes();
-		
-		echo $del;
-		
+		$all = array();
+		$all = Code::showCodes();
+				
+		require_once(ROOT.'/views/delete.php');
+				
 		var_dump($_POST);
-		return true;
+		
 	}
 	
 
