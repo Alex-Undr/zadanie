@@ -46,12 +46,22 @@ class Code
 	
 	public static function removeCodes()
 	{
-		echo '
-		 <form action="delete" method="post">		  
-		  <textarea rows="10" cols="45" name="code"></textarea>
-		  <input type="submit"></p>
-		 </form>';
-	
+		if(!empty($_POST["code"])){
+			
+			$db = Db::getConnection();
+			
+			$stCode = $_POST["code"];
+			
+			$arCode = array_diff(preg_split('/\n|\s/', $stCode), array(''));
+			
+			foreach($arCode as $code){
+				$resultDB = $db->query("DELETE FROM `code` WHERE `code` = '$code';");		
+			}
+			
+			// echo '<pre>';
+			// var_dump($arCode);
+			// echo '</pre>';
+		}
 	}
 
 }

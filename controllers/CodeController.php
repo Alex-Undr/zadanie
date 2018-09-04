@@ -43,7 +43,9 @@ class CodeController
 				
 		require_once(ROOT.'/views/delete.php');
 				
-		var_dump($_POST);
+				
+		$delete = Code::removeCodes();
+		echo $delete;
 		
 	}
 	

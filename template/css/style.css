@@ -45,3 +45,10 @@
 		th:nth-child(1n+2){			
 			border-left: 1px solid black;
 		}
+		textarea{
+			border-radius: 9px;
+			margin-top: 20px;
+		}
+		input{
+			border-radius: 5px;
+		}

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>Show all codes</title>
+    <title>Delete codes</title>
 	<link href="../template/css/style.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -27,8 +27,11 @@
 				<?php }	?>				
 				</table>
 			</div>				
-		</div>
-		<?php $del = Code::removeCodes();?>
+		</div>			
+		 <form action="/zadanie/delete/" method="post">		  
+		  <textarea rows="10" cols="45" name="code" required></textarea>
+		  <input type="submit"></p>
+		 </form>	
 	</div>
 
 </body>
