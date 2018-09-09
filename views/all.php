@@ -25,9 +25,16 @@
 					<td><?php echo $result['date'];?></td>
 				  </tr>
 				<?php }	?>
-				</table>
-			</div>	
+				</table>								
+			</div>			
 		</div>
+		
+		<form class="gen-form" style="margin-top: 2%;" action="/zadanie/generate/" method="post">						
+						<input class="btn-green" type="submit" value="Generate">
+						<input type="number" min="1" max="100"  name="count" required> codes (max 100)			  						
+				</form>	
+				
+				<div class="btn-green" style="margin-top: 2%;"><a href="/zadanie/delete/">Delete codes</a></div>
 	</div>
 
 </body>

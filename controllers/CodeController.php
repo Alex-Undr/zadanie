@@ -5,7 +5,7 @@ include_once ROOT.'/models/Code.php';
 
 class CodeController
 {
-	
+
 	public function actionAll()
 	{
 		$all = array();
@@ -15,10 +15,6 @@ class CodeController
 		// echo '<pre>';
 		// print_r($all);
 		// echo '</pre>';
-		
-		
-		
-
 
 	}
 
@@ -27,7 +23,7 @@ class CodeController
 	{
 
 		$code = array();
-		$code = Code::createCodes(10);
+		$code = Code::createCodes($_POST['count']);
 		
 		require_once(ROOT.'/views/generate.php');
 		// echo '<pre>';

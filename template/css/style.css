@@ -4,7 +4,7 @@
 		
 		.border{
 			margin-left: 30%;
-			margin-top: 5%;
+			margin-top: 3%;
 		    border-radius: 27px;
 		    padding: 10px;
 			text-align: center;
@@ -51,4 +51,28 @@
 		}
 		input{
 			border-radius: 5px;
+			height: 32px;			
+		}
+		.btn-green{
+		    background-color: #88aa00;
+			border-radius: 5px;
+			height: 37px;
+			width: 25%;
+			border: 1px solid gray;					
+		}		
+		
+		a{
+			display: block;
+			color: black;
+			text-decoration: none;			
+			text-align: center;
+			line-height: 37px;
+		}
+		div.btn-green{
+			margin-top: 15%;
+			margin-left: 35%;	
+		}
+		
+		.gen-form{
+			margin-top: 15%;
 		}

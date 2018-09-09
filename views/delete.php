@@ -29,9 +29,16 @@
 			</div>				
 		</div>			
 		 <form action="/zadanie/delete/" method="post">		  
-		  <textarea rows="10" cols="45" name="code" required></textarea>
-		  <input type="submit"></p>
+		  <textarea rows="10" cols="45" name="code" required></textarea><br>
+		  <input class="btn-green" type="submit" value="Delete"></p>
+		  
 		 </form>	
+		 		<form class="gen-form" style="margin-top: 2%;" action="/zadanie/generate/" method="post">						
+						<input class="btn-green" type="submit" value="Generate">
+						<input type="number" min="1" max="100"  name="count" required> codes (max 100)			  						
+				</form>	
+				
+				<div class="btn-green" style="margin-top: 2%;"><a href="/zadanie/all/">Show all codes</a></div>
 	</div>
 
 </body>

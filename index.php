@@ -9,10 +9,18 @@ define('ROOT', dirname(__FILE__));
 require_once(ROOT.'/components/Router.php');
 require_once(ROOT.'/components/Db.php');
 
-//Установка зєднання з БД
-
 
 //Виклик роутера
 $router = new Router();
 $router->run();
+
+$uri = $_SERVER['REQUEST_URI'];
+$count_r = substr_count($uri, '/');
+
+if($count_r <= 2)
+{
+	require_once(ROOT.'/views/index.php');
+}
+
+
 

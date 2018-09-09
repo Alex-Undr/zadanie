@@ -28,6 +28,10 @@
 				</table>
 			</div>	
 		</div>
+		
+		<div class="btn-green" style="margin-top: 2%;"><a href="/zadanie/all/">Show all codes</a></div>
+		<div class="btn-green" style="margin-top: 2%;"><a href="/zadanie/delete/">Delete codes</a></div>
+		
 	</div>
 
 </body>
