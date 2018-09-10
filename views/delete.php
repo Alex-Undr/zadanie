@@ -17,6 +17,10 @@
 					<th>Date</th>
 				  </tr>
 				<?php $i = 0;
+				// echo '<pre>';
+				// var_dump($nfCodes);
+				// echo '</pre>';
+				
 				foreach($all as $result){
 					$i++;?>			
 				  <tr>
@@ -29,7 +33,7 @@
 			</div>				
 		</div>			
 		 <form action="/zadanie/delete/" method="post">		  
-		  <textarea rows="10" cols="45" name="code" required></textarea><br>
+		  <textarea rows="10" cols="45" name="code" required ></textarea><br>
 		  <input class="btn-green" type="submit" value="Delete"></p>
 		  
 		 </form>	

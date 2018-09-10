@@ -36,13 +36,13 @@ class CodeController
 	{
 		$all = array();
 		$all = Code::showCodes();
+		
+						
+		$delete = Code::removeCodes();
+		echo $delete;
 				
 		require_once(ROOT.'/views/delete.php');
 				
-				
-		$delete = Code::removeCodes();
-		echo $delete;
-		
 	}
 	
 

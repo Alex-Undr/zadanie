@@ -14,6 +14,8 @@ require_once(ROOT.'/components/Db.php');
 $router = new Router();
 $router->run();
 
+
+//Перевірка на індексну сторінку
 $uri = $_SERVER['REQUEST_URI'];
 $count_r = substr_count($uri, '/');
 

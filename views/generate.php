@@ -16,7 +16,7 @@
 					<th>Code</th>
 					<th>Date</th>
 				  </tr>
-				<?php $i = 0;
+				<?php $i = 0; 
 				foreach($code as $code => $date){
 					$i++;?>			
 				  <tr>

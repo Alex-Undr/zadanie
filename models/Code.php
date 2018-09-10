@@ -54,12 +54,29 @@ class Code
 			
 			$arCode = array_diff(preg_split('/\n|\s/', $stCode), array(''));
 			
-			foreach($arCode as $code){
-				$resultDB = $db->query("DELETE FROM `code` WHERE `code` = '$code';");		
+			foreach($arCode as $fCode){
+				
+			$sth = $db->prepare("SELECT code FROM `code` WHERE `code` = '$fCode';");
+			$sth->execute();
+			$arResult = $sth->fetch(PDO::FETCH_ASSOC);
+			
+			
+			if($fCode !== $arResult['code']){
+				$nfCodes = array();
+				global $nfCodes;			
+				$nfCodes = $fCode;		
+				// var_dump($nfCodes);				
+			}
+
+				$delCode = $arResult['code'];
+				if($delCode){
+				$resultDB = $db->query("DELETE FROM `code` WHERE `code` = '$delCode';");	
+				}
 			}
 			
+			
 			// echo '<pre>';
-			// var_dump($arCode);
+			// var_dump($resultDB);
 			// echo '</pre>';
 		}
 	}
