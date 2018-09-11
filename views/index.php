@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>Show all codes</title>
+    <title>Select action</title>
 	<link href="template/css/style.css" rel="stylesheet" type="text/css">
 </head>
 

@@ -75,9 +75,11 @@ class Code
 			
 			}
 			
-			
-			return $nfCodes;
-			
+			if(!empty($nfCodes)){
+				
+				return $nfCodes;
+				
+			}
 			// echo '<pre>';
 			// var_dump($nfCodes);
 			// echo '</pre>';
