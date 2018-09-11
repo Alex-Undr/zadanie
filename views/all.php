@@ -25,6 +25,7 @@
 		.divtable{
 			border: 1px solid black;
 			border-radius: 17px;
+			overflow: scroll;
 		}		
 		.table_blur {
 			border-collapse: collapse;		
