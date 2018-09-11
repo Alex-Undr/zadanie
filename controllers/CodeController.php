@@ -5,7 +5,7 @@ include_once ROOT.'/models/Code.php';
 
 class CodeController
 {
-	
+
 	public function actionAll()
 	{
 		$all = array();
@@ -15,10 +15,6 @@ class CodeController
 		// echo '<pre>';
 		// print_r($all);
 		// echo '</pre>';
-		
-		
-		
-
 
 	}
 
@@ -27,22 +23,26 @@ class CodeController
 	{
 
 		$code = array();
-		$code = Code::createCodes(10);
+		$code = Code::createCodes($_POST['count']);
 		
-		echo '<pre>';
-		print_r($code);
-		echo '</pre>';		
+		require_once(ROOT.'/views/generate.php');
+		// echo '<pre>';
+		// print_r($code);
+		// echo '</pre>';		
 
 	}
 	
 	public function actionDelete()
 	{
-		$del = Code::removeCodes();
+		$all = array();
+		$all = Code::showCodes();
 		
-		echo $del;
+		$nfCodes = array();
+		$nfCodes = Code::removeCodes();
 		
-		var_dump($_POST);
-		return true;
+				
+		require_once(ROOT.'/views/delete.php');
+				
 	}
 	
 
