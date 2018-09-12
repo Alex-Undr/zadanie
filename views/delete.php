@@ -39,7 +39,7 @@
 			  
 				}
 			}else{
-				echo 'Write the code through a space or an enter';
+				echo 'Write the code through a space or enter';
 			}
 		  ?>"></textarea><br>
 		  <input class="btn-green" type="submit" value="Delete"></p>
