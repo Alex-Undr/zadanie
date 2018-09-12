@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>Delete codes</title>
 	<link href="../template/css/style.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -54,4 +55,23 @@
 	</div>
 
 </body>
+	<script>
+		$(function() {
+		
+			$.ajax(
+			{
+				type: "POST",
+				url: "/zadanie/delete/",	
+			
+				success: function (data){
+					var table = $(data).find( ".divtable" );
+					console.log(table);
+					$(".content").html(table);
+
+				}
+			});
+		
+        });
+
+	</script>
 </html>
